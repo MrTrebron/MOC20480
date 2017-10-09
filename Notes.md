@@ -9,7 +9,7 @@ put > Update
 delete > Delete
 
 ## TypeScript
-[http://www.typescriptlang.com]
+http://www.typescriptlang.com
 
 ## Extension aus dem Visual Studio Marketplace
 Mads Kristensen
