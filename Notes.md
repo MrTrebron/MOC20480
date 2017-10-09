@@ -26,3 +26,11 @@ Serverseitig npm
 Wenn kein Internetzugang am Entwicklerrechner zur Verfügung steht kann über lokale Contentserver die Packages zur Verfügung gestellt werdern. z.B. Artifactory von JFrog
 
 
+## HTML - Neue Elemente
+<section>
+<header>
+<footer>
+<nav>
+<article>
+<aside>
+
