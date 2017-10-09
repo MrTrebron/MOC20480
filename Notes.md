@@ -1,3 +1,7 @@
+## Kursunterlagen
+https://skillpipe.com
+Benötigt eine Anmeldung
+
 ## Material zum Kurs
 https://www.microsoft.com/learning/companionmoc
 
@@ -42,4 +46,5 @@ Eine Variable mit `let` ist nur in diesem Kontext gültig. Bei engeschobenen Cod
 ### use strict
 Mit `"use strict"` kann man erzwingen das Variablen vorher definiert werden müssen
 
+### TypeScript
 http://http://definitelytyped.org/
