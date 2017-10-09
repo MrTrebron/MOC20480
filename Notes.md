@@ -41,10 +41,22 @@ Wenn kein Internetzugang am Entwicklerrechner zur Verfügung steht kann über lo
 ## Javascript
 ### `var` vs. `let`
 Eine Variable mit `var` ist in der ganzen Funktion gültig. Auch bei eingeschobenen Code Blöcken
-Eine Variable mit `let` ist nur in diesem Kontext gültig. Bei engeschobenen Code Block
+Eine Variable mit `let` ist nur in diesem Kontext gültig. Bei eingeschobenen Code Block
 
 ### use strict
 Mit `"use strict"` kann man erzwingen das Variablen vorher definiert werden müssen
 
+### JSLint
+Extension für Visual Studio Code
+
 ### TypeScript
 http://http://definitelytyped.org/
+
+### SignalR 
+für Realt Time Informationen im Browser
+In der neuesten Version kann man damit Pollen oder WebSockets nutzen
+
+### JQuery 
+`$` als Kurzschreibweise für `JQuery`
+
+JQuery besitzt ein `$(document).ready()` um zu prüfen ob das DOM geladen ist. Dies ist effezienter als `windows.onload`
