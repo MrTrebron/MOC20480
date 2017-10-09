@@ -13,7 +13,7 @@ put > Update
 delete > Delete
 
 ## TypeScript
-http://www.typescriptlang.com
+http://www.typescriptlang.org
 
 ## Extension aus dem Visual Studio Marketplace
 Mads Kristensen
@@ -27,10 +27,19 @@ Wenn kein Internetzugang am Entwicklerrechner zur Verfügung steht kann über lo
 
 
 ## HTML - Neue Elemente
-<section>
-<header>
-<footer>
-<nav>
-<article>
-<aside>
+`<section>`
+`<header>`
+`<footer>`
+`<nav>`
+`<article>`
+`<aside>`
 
+## Javascript
+### `var` vs. `let`
+Eine Variable mit `var` ist in der ganzen Funktion gültig. Auch bei eingeschobenen Code Blöcken
+Eine Variable mit `let` ist nur in diesem Kontext gültig. Bei engeschobenen Code Block
+
+### use strict
+Mit `"use strict"` kann man erzwingen das Variablen vorher definiert werden müssen
+
+http://http://definitelytyped.org/
