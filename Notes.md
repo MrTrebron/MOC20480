@@ -60,3 +60,10 @@ In der neuesten Version kann man damit Pollen oder WebSockets nutzen
 `$` als Kurzschreibweise für `JQuery`
 
 JQuery besitzt ein `$(document).ready()` um zu prüfen ob das DOM geladen ist. Dies ist effezienter als `windows.onload`
+
+
+
+---
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+https://rogerdudler.github.io/git-guide/index.de.html
