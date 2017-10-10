@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
@@ -42,8 +42,28 @@
                         
                     <!-- Use the following template for the inputs -->
                     <div class="field">
-                        <label for="{input-id}">label:</label>
-                        <input type="{type}" id="{input-id}" name="{input-name}" />
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required="required" autofocus="autofocus" />
+                    </div>
+                    <div class="field">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required="required"/>
+                    </div>
+                    <div class="field">
+                        <label for="EmailAddress">Email Address:</label>
+                        <input type="email" id="EmailAddress" name="EmailAddress" required="required" />
+                    </div>
+                    <div class="field">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required="required" pattern="[0-9a-zA-Z]{5,}" title="at least 5 letters and numbers"/>
+                    </div>
+                    <div class="field">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" />
+                    </div>
+                    <div class="field">
+                        <label for="websiteUrl">Website URL:</label>
+                        <input type="url" id="websiteUrl" name="websiteUrl" placeholder="https://" />
                     </div>
 
                     <div>
