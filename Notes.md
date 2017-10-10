@@ -11,7 +11,7 @@ NuGet
 AspNetCore.Static Files
 
 ## CRUD
-put > Create
+post > Create >> Daten im Body
 get > Read
 put > Update
 delete > Delete
@@ -60,6 +60,11 @@ In der neuesten Version kann man damit Pollen oder WebSockets nutzen
 `$` als Kurzschreibweise für `JQuery`
 
 JQuery besitzt ein `$(document).ready()` um zu prüfen ob das DOM geladen ist. Dies ist effezienter als `windows.onload`
+
+### Typisiertes arbeiten im Visual Studio
+Visual Studio bietet durch IntelliSense die Möglichkeit DOM Elemente typisiert zu selektieren
+document.getElementById("ID");
+document.ID;
 
 
 
