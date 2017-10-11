@@ -15,32 +15,41 @@
 
     var ready = function () {
         // TODO: display the video controls
+        controls.style.display = "block";
 
     };
 
     var play = function () {
         // TODO: play the video
- 
+        video.play();
+        playButton.style.display = "none";
+        pauseButton.style.display = "";
     };
 
     var pause = function () {
         // TODO: pause the video
-  
+        video.pause();
+        playButton.style.display = "";
+        pauseButton.style.display = "none";
     };
 
     var updateTime = function () {
         // TODO: Set time.textContent using video.current time.
         //       Use the formatTime function to convert raw seconds into HH:MM:SS format.
-
+        time.textContent = formatTime(video.currentTime);
     };
 
     pauseButton.style.display = "none";
 
     // TODO: Add event listeners for:
     //       video loaddata
+    video.addEventListener("loadeddata", ready, false);
     //       video timeupdate
+    video.addEventListener("timeupdate", updateTime, false);
     //       play click
+    playButton.addEventListener("click", play, false);
     //       pause click
+    pauseButton.addEventListener("click", pause, false);
 
 } ());
 // SIG // Begin signature block
