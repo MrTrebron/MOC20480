@@ -36,19 +36,29 @@
         load: function () {
             /// <summary>Loads the starred sessions from storage.</summary>
 
-            // TODO: get the "stars" from local storage
 
-            // TODO: parse the JSON string into this.sessions
-            
-            // TODO: handle failures due to missing data, etc
+            var starsJSON = localStorage.getItem("stars");
+
+            if (starsJSON) {
+                try {
+                    this.sessions = JSON.parse(starsJSON);
+                }
+                catch (exception) {
+                    this.sessions = [];
+                }
+            } else {
+                this.sessions = [];
+            }
+
+ 
         },
 
         save: function () {
             /// <summary>Saves the starred sessions to storage.</summary>
 
-            // TODO: convert this.sessions into a JSON string
+            var jsonString = JSON.stringify(this.sessions);
             
-            // TODO: save this JSON string into local storage as "stars"
+            this.localStorage.setItem("stars", jsonString);
         }
     });
 

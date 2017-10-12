@@ -21,7 +21,9 @@
 
             this.element = this.scheduleItemTemplate.createElement(data);
 
-            // TODO: Check if item is starred
+            if (localStarStorage.isStarred(this.id)) {
+                this.element.classList.add(this.starredClass);
+            }
 
             this.initializeElementClass();
             this.initializeElementPosition(data.start, data.end);
@@ -75,13 +77,15 @@
         unsetStar: function () {
             this.element.classList.remove(this.starredClass);
             this.postStarChange(false);
-            // TODO: remove the star from the item
+            
+            this.localStarStorage.removeStar(this.id);
         },
 
         setStar: function () {
             this.element.classList.add(this.starredClass);
             this.postStarChange(true);
-            // TODO: add a star to the item
+            
+            this.localStarStorage.addStar(this.id);
         },
 
         postStarChange: function (isStarred) {
