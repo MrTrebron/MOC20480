@@ -49,22 +49,6 @@
         error,
         { enableHighAccuracy: true, timeout: 5000 });
 
-    function myPositionCallbackFunction(position) {
-        var latitude = position.coords.latitude;
-        var longitude = position.coords.longitude;
-        var accuracy = position.coords.accuracy;
-        var heading = position.coords.heading;
-        var speed = position.coords.speed;
-        var altitude = position.coords.altitude;
-        var altitudeAccuracy = position.coords.altitudeAccuracy;
-        // Add code here, to process the information.
-    }
-
-    function myPositionErrorCallbackFunction(error) {
-        var errorMessage = error.message;
-        var errorCode = error.code;
-        // Add code here, to process the information.
-    }
 } ());
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr

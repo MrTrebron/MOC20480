@@ -27,10 +27,10 @@
 
     // TODO: add onoffline and ononline events to document.body,
     //       which either hide or show navigation links.
-    window.addEventListener("online", showLinks, false);
-    window.addEventListener("offline", hideLinksThatRequireOnline, false);
+    document.body.ononline = showLinks;
+    document.body.onoffline = hideLinksThatRequireOnline;
 
-    // TODO: also handle the applicationCache error event to hide links
+        // TODO: also handle the applicationCache error event to hide links
     applicationCache.addEventListener("error", hideLinksThatRequireOnline, false);
     
 } ());
