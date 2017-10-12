@@ -23,9 +23,12 @@ http://www.typescriptlang.org
 Mads Kristensen
 Web Extensions
 
-## Packages mit Bower & npm
+## Packages mit NuGet, Bower & npm
 Clientseitig Bower >> Yarn oder Webpack
-Serverseitig npm
+Serverseitig
+     ASP.NET > NuGet
+     ASP:NET Core > npm
+
 
 Wenn kein Internetzugang am Entwicklerrechner zur Verfügung steht kann über lokale Contentserver die Packages zur Verfügung gestellt werdern. z.B. Artifactory von JFrog
 

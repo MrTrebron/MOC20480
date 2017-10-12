@@ -23,6 +23,7 @@ header.page-header p {
 
 /* TODO: header.page-header .register */
 header.page-header .register {
+    display: block;
 
 }
 
