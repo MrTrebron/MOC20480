@@ -75,3 +75,10 @@ document.ID;
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 https://rogerdudler.github.io/git-guide/index.de.html
+
+http://caniuse.com/#home
+
+https://wiki.selfhtml.org/
+
+https://developer.mozilla.org/de/
+
