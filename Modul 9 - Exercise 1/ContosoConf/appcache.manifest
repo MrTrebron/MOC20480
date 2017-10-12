@@ -1,6 +1,11 @@
 ﻿CACHE MANIFEST
 
+# Version 1.0
 # TODO: Add index, about, schedule and location pages
+/index.htm
+/about.htm
+/location.htm
+/schedule.htm
 
 /schedule/list
 
