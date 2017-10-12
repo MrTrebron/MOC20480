@@ -41,17 +41,29 @@
 
         drawBadge: function (image) {
             // TODO: Get the canvas's (this.canvas) context and assign to this.context
-            
+            this.context = this.canvas.getContext("2d");
+        
             // TODO: Draw the following by calling the helper methods of `this`
             //       background
+            this.drawBackground();
             //       top text
+            this.drawTopText();
             //       speaker name
+            this.drawSpeakerName();
             //       image (or placeholder if no image)
+            if (image) {
+                this.drawSpeakerImage(image);
+            } else {
+                this.drawImagePlaceholder();
+            }
             //       bar code (passing this.speakerId)
+            this.drawBarCode(this.speakerId);
         },
 
         drawBackground: function () {
             // TODO: Fill the canvas with a white rectangle
+            this.context.fillStyle = "white";
+            this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
         },
 
         drawSpeakerImage: function (image) {
@@ -60,6 +72,10 @@
             //       Draw at:
             //       x, y = 20, 20
             //       w, h = 160, 160
+            var size = Math.min(image.width, image.height);
+            var sourceX = image.width / 2 - size / 2;
+            var sourceY = image.height / 2 - size / 2;
+            this.context.drawImage(image, sourceX, sourceY, size, size, 20, 20, 160, 160);
         },
 
         drawImagePlaceholder: function () {
@@ -87,6 +103,11 @@
             //       fill style = black
             //       text baseline = top
             //       text align = left
+            this.context.font = "40px sans-serif";
+            this.context.fileStyle = "black";
+            this.context.baseLine = "top";
+            this.context.textAlign = "left";
+            this.context.fillText(this.speakerName, 200, 60);
         },
 
         drawBarCode: function (text) {
