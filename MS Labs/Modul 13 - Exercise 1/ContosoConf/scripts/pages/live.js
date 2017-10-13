@@ -11,7 +11,9 @@
 
         initializeSocket: function (socket) {
             this.socket = socket;
-            // TODO: Assign a callback to handle messages from the socket.
+            
+            this.socket.onmessage = this.handleSocketMessage.bind(this);
+
         },
 
         initializeUI: function (sectionElement) {
@@ -35,22 +37,25 @@
         },
 
         askQuestion: function (text) {
-            // TODO: Create a message object with the format { ask: text }
-
-            // TODO: Convert the message object into a JSON string
-            
-            // TODO: Send the message to the socket
-            
+            // Create a message object with the format { ask: text }
+            var message = {
+                ask: text
+            };
+            // Convert the message object into a JSON string
+            var json = JSON.stringify(message);
+            // Send the message to the socket
+            this.socket.send(json);
             // Clear the input ready for another question.
             this.questionInput.value = "";
         },
 
         handleSocketMessage: function (event) {
-            // TODO: Parse the event data into message object.
-            // var message = ... ;
+            var message = JSON.parse(event.data);
+            
+            if (message.questions) {
+                this.handleQuestionsMessage(message);
+            }
 
-            // TODO: Check if message has a `questions` property, before calling handleQuestionsMessage
-            this.handleQuestionsMessage(message);
         },
 
         handleQuestionsMessage: function (message) {
@@ -60,7 +65,10 @@
             //         { text: "...", id: 2 }
             //   ] }
             
-            // TODO: Display each question in the page, using the displayQuestion function.
+
+            if (message.questions) {
+                message.questions.forEach(this.displayQuestion, this);
+            }
         },
 
         handleRemoveMessage: function (message) {
@@ -115,8 +123,8 @@
     });
 
 
-    // TODO: Create a web socket connection to ws://localhost:55981/live/socket.ashx
-    // var socket = 
+    
+    var socket = new WebSocket('ws://localhost:55981/live/socket.ashx');
     LivePage.create(
         socket,
         document.querySelector("section.live")
