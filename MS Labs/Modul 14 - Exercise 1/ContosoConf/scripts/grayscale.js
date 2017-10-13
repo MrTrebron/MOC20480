@@ -38,6 +38,11 @@
         var imageData = getImageData(context, image);
 
         // TODO: Create a Worker that runs /scripts/grayscale-worker.js
+        var webWorker;
+        if (typeof (Worker) !== "undefined") {
+            webWorker = new Worker("grayscale-worker.js");
+            self.postMessage(imageData);
+        }
 
         var pixels = imageData.data;
         // 4 array items per pixel => Red, Green, Blue, Alpha

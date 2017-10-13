@@ -56,7 +56,7 @@ Extension für Visual Studio Code
 http://http://definitelytyped.org/
 
 ### SignalR 
-für Realt Time Informationen im Browser
+für Real Time Informationen im Browser
 In der neuesten Version kann man damit Pollen oder WebSockets nutzen
 
 ### JQuery 
@@ -70,6 +70,12 @@ document.getElementById("ID");
 document.ID;
 
 
+## Real time communication
+### WebSockets
+Muss am Server aktiviert werden
+
+### HTTP2
+Schon Standard, aber noch nicht in allen Servern integriert
 
 ---
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
@@ -83,3 +89,7 @@ https://wiki.selfhtml.org/
 https://developer.mozilla.org/de/
 
 http://www.microsoft.com/learning
+
+https://docs.microsoft.com/de-de/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview
+
+https://azure.microsoft.com/de-de/pricing/details/notification-hubs/
