@@ -12,8 +12,11 @@ AspNetCore.Static Files
 
 ## CRUD
 post > Create >> Daten im Body
+
 get > Read
+
 put > Update
+
 delete > Delete
 
 ## TypeScript
